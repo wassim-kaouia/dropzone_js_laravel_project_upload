@@ -7,8 +7,6 @@
             <div class="col-md-12">
                 {{ $post->title }}
                 <hr>
-
-
                 @if ($post->images()->count() >0)
                     
                 @else
@@ -19,8 +17,9 @@
 
         <div class="row justify-content-center">
            <div class="col-md-12">
-            <form action="/file-upload" class="dropzone" id="myDropzoneForm">
-            
+            <form action="{{ route('posts.upload',['id' => $post->id]) }}" class="dropzone" id="myDropzoneForm">
+                @csrf
+                
             </form>
            </div>
         </div>
