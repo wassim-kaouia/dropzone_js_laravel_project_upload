@@ -18,6 +18,10 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.0/dropzone.css">
+
+    {{-- lity library --}}
+
+    <link rel="stylesheet" href="{{ asset('css/lity.css') }}">
 </head>
 <body>
     <div id="app">
@@ -77,8 +81,11 @@
         </main>
     </div>
     
+    
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.0/dropzone.js"></script>
+    <script src="{{ asset('js/lity.js') }}" defer></script>
+    @yield('scripts')
 </body>
 </html>
