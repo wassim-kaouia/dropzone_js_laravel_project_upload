@@ -20,3 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+//dropzones routes
+
+Route::get('/posts','PostController@index')->name('posts.index');
+Route::get('/posts/{id}','PostController@show')->name('posts.show');
